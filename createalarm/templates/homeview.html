@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="homepage">Welcome to the mini Alarm app I built</h1>
+
+<div class="exists">
+    <form action="/createalarm/" method="GET">
+    {% csrf_token %}
+    <input type="submit" class="existingalarm" value="CREATE ALARM">
+</form>
+</div>
+<!--<div class="new">-->
+<!--    <form action="/createalarm/" method="GET">-->
+<!--    {% csrf_token %}-->
+<!--    <input type="submit" class="createalarm" value="create alarm">-->
+<!--</form>-->
+
+<!--</div>-->
+{% endblock %}

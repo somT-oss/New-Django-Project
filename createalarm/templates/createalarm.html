@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li{% if messages.tags %}{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<div class="form">
+<!--    <br/><br/>-->
+    <form action="."  method="POST" class="mainform">
+    {% csrf_token %}
+<!--    <table class="table">-->
+        {{ form.as_p }}
+<!--    </table>-->
+    <input type="submit" value="save" class="save"/>
+</form>
+<!--    <h1 class="headone">Add your alarm here</h1>-->
+</div>
+{% endblock %}

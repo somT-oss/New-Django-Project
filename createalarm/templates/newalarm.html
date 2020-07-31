@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="newhead">Your alarm page</h1>
+<div class="maindiv">
+    <ol>
+    {% for alarms in object %}
+        <li class="mainlist">{{ alarms.alarm_time }} - {{ alarms.title }} - {{ alarms.description }}</li>
+        <br>
+    {% endfor %}
+    </ol>
+</div>
+
+{% endblock %}
